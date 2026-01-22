@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background-color: #0f1115; /* deep black */
+    color: #ffffff;           /* white text */
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    color: #cfcfcf;
+  }
+  
+  /* Horizontal line */
+  hr {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 30px 0;
+  }
+  
+  /* Sections (cards) */
+  section {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: #171a21; /* dark card */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Paragraphs */
+  section p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #e5e5e5;
+  }
+  
+  /* Headings inside sections */
+  section h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  /* Lists */
+  ul {
+    margin-left: 20px;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    color: #e5e5e5;
+  }
+  
+  /* Contact Info */
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  /* Form styling */
+  .contact-form label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #ffffff;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #0f1115;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #999;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  /* Button */
+  button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 12px 22px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    section {
+      padding: 20px;
+    }
+  }

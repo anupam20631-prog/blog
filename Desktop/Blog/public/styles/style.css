@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* BODY – slightly lighter than header/footer */
+  body {
+    background: #0d0d0d;   /* lighter black */
+    color: #fff;
+  }
+  
+  /* COMMON */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* HEADER – pure black */
+  .header {
+    background: #000;     /* darkest */
+    border-bottom: 1px solid #222;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  
+  nav a {
+    margin-left: 25px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  nav a:hover {
+    color: #fff;
+  }
+  
+  /* HERO – elevated surface */
+  /* .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 50px auto;
+    align-items: center;
+    background: #141414;
+    padding: 40px;
+    border-radius: 10px;
+  } */
+  .hero {
+    display: flex;
+    flex-direction: column;   /* ✅ KEY CHANGE */
+    gap: 40px;
+    margin: 50px auto;
+    background: #141414;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .hero-text p {
+    width: 100%;
+    font-size: 16px;
+    color: #bbb;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  .meta {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #999;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 430px;
+    background-size: cover;
+    object-fit: cover;
+  }
+  .hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+ 
+  
+  /* POSTS GRID */
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  
+  /* POST CARD – lifted from body */
+  .post-card {
+    background: #141414;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .post-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .post-content {
+    padding: 20px;
+  }
+  
+  .post-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .post-content p {
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 15px;
+  }
+  
+  .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .read-more {
+    background: #fff;
+    color: #000;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  /* FOOTER – pure black */
+  .footer {
+    background: #000;     /* darkest */
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+    color: #999;
+    border-top: 1px solid #222;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+    }
+  
+    .posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .posts {
+      grid-template-columns: 1fr;
+    }
+  
+    nav {
+      display: none;
+    }
+  }

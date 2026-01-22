@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= post.title %> | Escape Blog</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">ESCAPE</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/posts">Posts</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- POST CONTENT -->
+  <main class="container" style="max-width: 800px; margin: 60px auto;">
+
+    <!-- TITLE -->
+    <h1 style="font-size: 36px; margin-bottom: 10px;">
+      <%= post.title %>
+    </h1>
+
+    <!-- META -->
+    <p style="color:#aaa; margin-bottom: 30px;">
+      <%= post.date %>
+    </p>
+
+    <!-- IMAGE -->
+    <img 
+    src="/images/<%= post.id %>.jpeg"
+      alt="<%= post.title %>"
+      style="width:100%; border-radius:10px; margin-bottom:30px;"
+    >
+
+    <!-- INTRO / EXCERPT -->
+    <p style="color:#bbb; font-size:17px; margin-bottom:25px;">
+      <%= post.excerpt %>
+    </p>
+
+    <!-- FULL DYNAMIC CONTENT -->
+    <article style="line-height: 1.8; color:#ccc; font-size:16px;">
+      <%- post.content %>
+    </article>
+
+    <!-- BACK LINK -->
+    <div style="margin-top:40px;">
+      <a href="/" class="btn">← Back to Home</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Escape Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

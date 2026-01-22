@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel Blog</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <h1 class="logo">ESCAPE</h1>
+      <nav>
+        <a href="/home">Home</a>
+        <a href="/destination">Destinations</a>
+        <a href="lifestyle">Lifestyle</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / FEATURED POST -->
+  <section class="hero container">
+    <div class="hero-text">
+      <h2><%= heropost.title %></h2>
+      <p><%= heropost.excerpt %></p>
+      <a href="/hero" class="btn">READ POST</a>
+      <div class="meta"><%= heropost.date %></div>
+    </div>
+  
+    <div class="hero-image">
+      <img src="images/hero.jpeg" alt="<%= heropost.title %>">
+    </div>
+  </section>
+
+  <!-- POSTS GRID -->
+  <section class="posts container">
+    <% posts.forEach(post => { %>
+      <article class="post-card">
+        <img src="/images/<%= post.id %>.jpeg" alt="<%= post.title %>">
+        <div class="post-content">
+          <h3><%= post.title %></h3>
+          <p><%= post.excerpt %></p>
+          <div class="post-footer">
+            <span><%= post.date %></span>
+            <a href="/post/<%= post.id %>" class="read-more">READ POST</a>
+          </div>
+        </div>
+      </article>
+    <% }) %>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Escape Blog. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
